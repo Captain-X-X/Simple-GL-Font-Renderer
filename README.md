@@ -1,0 +1,3 @@
+this should work for windows, but I only tested on ArchLinux...
+
+make sure to download Glad, GLM, stb_truetype & some font(s).
