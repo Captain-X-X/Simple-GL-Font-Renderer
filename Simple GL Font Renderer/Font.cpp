@@ -32,8 +32,8 @@ bool FFont::loadFont(const char *fontFile, float fontScale)
     glBindTexture(GL_TEXTURE_2D, 0);
 
     // set the texture in the shader
-    Shader::EnableShader(fontShader);
-    Shader::setI1("u_fontTexture", fontTexture);
+    glUseProgram(fontShader);
+    glUniform1i(glGetUniformLocation(fontShader, "u_fontTexture"), fontTexture);
 
     // setup buffers VAO & VBO
     m_textCapacity = 1024;
